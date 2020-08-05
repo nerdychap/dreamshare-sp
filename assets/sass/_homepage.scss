@@ -135,6 +135,11 @@ section{
             justify-content: center;
             align-items: center;
             margin: 5px;
+            &:hover{
+                img{
+                    filter: brightness(50%);
+                }
+            }
             .activity-name{
                 position: absolute;
                 color: white;
