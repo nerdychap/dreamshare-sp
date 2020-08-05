@@ -1,0 +1,442 @@
+header{
+    background-image: url(../images/img/headerBackground.jpg);
+    background-size: cover;
+    color: white;
+    overflow: auto;
+    .company-name{
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    nav{
+        ul{
+            li{
+                text-align: center;
+                padding: 5px;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-family: $font-Roboto;
+                    color: inherit;
+                    transition: all .4s;
+                    &:hover{
+                        border-bottom: solid 2px white;
+                    }
+                }
+                &:last-child{
+                    border: 2px solid white;
+                    border-radius: 15px 15px;
+                }
+            }
+        }
+    }
+    section{
+        text-align: center;
+        h1, p{
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        p{
+            font-family: $font-Roboto;
+        }
+        .find{
+            background-color: $col-pink;
+            border-radius: 25px / 25px;
+            display: inline-block;
+            font-size: 14px;
+            padding: 3%;
+            transition: color .5s, background-color .5s;
+            @include media-max($mobile-dev-landsc){
+                margin-bottom: 50px;
+            }
+            &:hover{
+                background-color: white;
+                color: $col-pink;
+            }
+        }
+    }
+}
+section{
+    article{
+        .sect-paragraph{
+            text-align: center;
+            margin: 20px 0;
+        }
+        .partners{
+            max-width: 1200px;
+        }
+        .partner{
+            text-align: center;
+            margin: 30px 20px;
+            .img-container{
+                text-align: center;
+                position: relative;
+                img:first-child{
+                    border-radius: 50%;
+                    width: 30%;
+                    margin: auto;
+                }
+                img[alt="music"],img[alt="brush"],img[alt="camera"], img[alt="airplane"]{
+                    width: 35px;
+                    position: absolute;
+                    right: 34%;
+                    border: 4px solid white;
+                    bottom: 0%;
+                    height: 35px;
+                    border-radius: 50%;
+                    padding: 2px;
+                }
+                img[alt="music"]{
+                    background-color: $col-pink;
+
+                }
+                img[alt="brush"]{
+                    background-color: $col-green;
+                }
+                img[alt="camera"]{
+                    background-color: $col-orange;
+                }
+                img[alt="airplane"]{
+                    background-color: $col-purple;
+                }
+            }
+            .partner-bio{
+                font-family: $font-Roboto;
+                text-align: center;
+            }
+            .partner-name{
+                margin: 1% 0;
+            }
+        }
+        button{
+            background-color: white;
+            color: $col-pink;
+            border: 2px solid $col-pink;
+            border-radius: 25px 25px;
+            padding: 2% 5%;
+            margin: auto;
+            display: block;
+        }
+
+    }
+    .holiday-activities{
+        margin-bottom: 50px;
+        max-width: 1200px;
+        p{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .activity-container{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            .activity-name{
+                position: absolute;
+                color: white;
+                z-index: 1;
+            }
+
+            img{
+                filter: brightness(70%);
+                border-radius: 6px;
+            }
+        }
+        #sports{
+            div{
+                color: black;
+            }
+        }
+    }
+}
+footer{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    .company-name{
+        text-transform: uppercase;
+        color: $col-pink;
+    }
+    .footer-section{
+        margin-bottom: 30px;
+        display: inline-grid;
+        width: 49%;
+        ul{
+            li{
+                font-family: $font-Roboto;
+                margin: 10px 0;
+                a{
+                    font-family: inherit;
+                    color: black;
+                }
+
+            }
+            div{
+                color: $col-pink;
+                font-family: $font-Roboto;
+                cursor: pointer;
+            }
+        }
+    }
+}
+hr{
+    border: none;
+    height: 2px;
+    background-color: $col-pink;
+}
+
+body > footer > div:nth-child(3) > ul > li:nth-child(5), body > footer > div:nth-child(3) > ul > li:nth-child(6){
+    display: none;
+}
+@include media-min($mobile-dev-landsc){
+    header{
+        padding-top: 2%;
+        .company-name{
+            font-size: 20px;
+            @include inline-block-width(25%);
+
+        }
+        nav{
+            @include inline-block-width(69%);
+            margin-right: 5%;
+            ul{
+                text-align: end;
+                li{
+                    text-align: center;
+                    padding: 5px;
+                    display: inline-block;
+                    margin: 0 1%;
+                    a{
+                        transition: all .4s;
+                        &:hover{
+                            border-bottom: solid 2px white;
+                        }
+                    }
+                    &:last-child{
+                        border: 2px solid white;
+                        border-radius: 25px 25px;
+                        padding: 1% 2%;
+                    }
+                }
+            }
+        }
+        section{
+            margin: 10% 0;
+            h1{
+                font-size: 24px;
+                width: 250px;
+                margin: auto;
+                @include media-min($tablet-dev-landsc){
+                    font-size: 35px;
+                    width: 350px;
+                }
+            }
+            p{
+                margin: 2% 0;
+            }
+            .find{
+                margin: 2% 0;
+                padding: 1% 2%;
+            }
+        }
+    }
+    section{
+        article{
+            margin-top: 5%;
+            text-align: center;
+            .sect-paragraph{
+                margin: 20px 0;
+            }
+            .partner{
+                margin: 30px 20px;
+                @include inline-block-width(44%);
+                .img-container{
+                    img:first-child{
+                        border-radius: 50%;
+                        width: 50%;
+                        margin: auto;
+                    }
+                    img[alt="music"],img[alt="brush"],img[alt="camera"], img[alt="airplane"]{
+                        width: 45px;
+                        right: 24%;
+                        @include media-min($tablet-dev-landsc){
+                            right: 29%;
+                        }
+                        border: 5px solid white;
+                        height: 45px;
+                        padding: 5px;
+                    }
+                }
+                .partner-name{
+                    margin: 3% 0;
+                }
+            }
+            button{
+                padding: 1% 2%;
+            }
+    
+        }
+        .holiday-activities{
+            margin-bottom: 50px;
+            p{
+                margin-top: 30px;
+            }
+            .activities{
+                display: grid;
+                gap: 5px;
+                grid-template-columns: repeat(2, 1fr);
+                .activity-container{
+                    margin: 5px;
+                    .activity-name{
+                        z-index: 1;
+                    }
+                    img{
+                        &:hover{
+                            filter: brightness(50%);
+                        }
+                    }
+                }
+                #beauty, #culture{
+                    grid-column: 1 / 3;
+                }
+            }
+
+            
+        }
+    }
+    footer{
+        width: 98%;
+        .footer-section{
+            width: 32%;
+        }
+    }
+}
+@include media-min($desktop-dev){
+    header{
+        .company-name{
+            @include inline-block-width(35%);
+        }
+        nav{
+            @include inline-block-width(45%);
+            margin-right: 19%;
+            ul{
+                li{
+                    &:last-child{
+                        padding: 1% 3%;
+                    }
+                }
+            }
+        }
+        section{
+            margin: 10% 0;
+            text-align: center;
+            h1{
+                font-size: 46px;
+                width: 450px;
+                line-height: 1.3;
+            }
+            p{
+                margin: 2% 0;
+                font-size: 20px;
+            }
+            .find{
+                
+                border-radius: 25px / 25px;
+                margin: 1% 0 50px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    section{
+        article{
+            margin-top: 5%;
+            text-align: center;
+            .sect-paragraph{
+                margin: 20px 0;
+                font-size: 20px;
+            }
+            .partners{
+                display: flex;
+                width: 80%;
+                margin: auto;
+                .partner{
+                    .img-container{
+                        img:first-child{
+                            border-radius: 50%;
+                            width: 50%;
+                            margin: auto;
+                        }
+                        img[alt="music"],img[alt="brush"],img[alt="camera"], img[alt="airplane"]{
+                            width: 40px;
+                            right: 22%;
+                            border: 5px solid white;
+                            height: 40px;
+                            padding: 5px;
+                        }
+                    }
+                    .partner-name{
+                        margin: 3% 0;
+                    }
+                }
+            }
+
+            button{
+                padding: 10px 2%;
+                margin: 2% auto 5%;
+                transition: color .5s, background-color .5s ;
+                &:hover{
+                    background-color: $col-pink;
+                    color: white;
+
+                }
+            }
+    
+        }
+        .holiday-activities{
+            margin-bottom: 50px;
+            width: 80%;
+            margin: 0 auto 50px;
+            p{
+                margin-top: 30px;
+            }
+            .activities{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                .activity-container{
+                    margin: 5px;
+                    .activity-name{
+                        z-index: 1;
+                        font-size: 24px;
+                    }
+
+                }
+                #culture{
+                    grid-column: 2 / 4;
+                }
+                #beauty{
+                    grid-column: 1 / 3;
+                }
+            }
+        }
+    }
+    footer{
+        width: 80%;
+        .company-name{
+            @include inline-block-width(25%)
+        }
+        .footer-section{
+            margin-bottom: 30px;
+            width: 24%;
+            ul{
+                li{
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
